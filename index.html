@@ -14,46 +14,130 @@
 
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
       margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #6f7fd9, #2aa7c9);
+      color: #000;
+    }
+
+    .app {
+      max-width: 900px;
+      margin: 0 auto;
       padding: 20px;
+    }
+
+    .card {
       background: #ffffff;
-      color: #000000;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      overflow: hidden;
     }
 
-    h1 {
+    .header {
+      background: linear-gradient(135deg, #2aa7c9, #1b6fa8);
+      color: #fff;
+      padding: 28px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    .header p {
+      margin: 6px 0 0;
+      opacity: 0.9;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    h2 {
       margin-top: 0;
+      color: #1b6fa8;
     }
 
-    ul {
-      padding-left: 20px;
+    .recipe-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    li {
-      margin: 10px 0;
+    .recipe-list li {
+      border-bottom: 1px solid #e0e0e0;
     }
 
-    a {
+    .recipe-list li:last-child {
+      border-bottom: none;
+    }
+
+    .recipe-list a {
+      display: block;
+      padding: 14px 6px;
       text-decoration: none;
-      color: #000000;
+      color: #000;
       font-size: 18px;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .recipe-list a span {
+      display: block;
+      font-size: 14px;
+      color: #666;
+      margin-top: 2px;
+    }
+
+    .recipe-list a:hover {
+      background: #f6f8fb;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 24px;
+      }
+
+      .recipe-list a {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <h1>Makan Makan</h1>
-  <p>Digitaal kook-playbook</p>
+<div class="app">
+  <div class="card">
 
-  <h2>Gerechten</h2>
-  <ul>
-    <li><a href="nasi-goreng.html">Nasi Goreng</a></li>
-  </ul>
+    <div class="header">
+      <h1>Makan Makan</h1>
+      <p>Digitaal kook-playbook</p>
+    </div>
+
+    <div class="content">
+      <h2>Gerechten</h2>
+
+      <ul class="recipe-list">
+        <li>
+          <a href="nasi-goreng.html">
+            Nasi Goreng
+            <span>Hoofdgerecht · Fornuis · TM6 · Airfryer</span>
+          </a>
+        </li>
+
+        <!-- volgende gerechten hier toevoegen -->
+        <!--
+        <li>
+          <a href="rendang.html">
+            Rendang
+            <span>Vleesgerecht · Fornuis · TM6 · Slow cooking</span>
+          </a>
+        </li>
+        -->
+      </ul>
+    </div>
+
+  </div>
+</div>
 
 </body>
 </html>
